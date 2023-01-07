@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>VIP</title>
+    <style>
+        .computer-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .computer-column {
+            flex-basis: 15%;
+            display: grid;
+            grid-template-columns: repeat(9, 1fr); /* разбить на 2 колонки */
+            grid-gap: 25px; /* отступы между ячейками */
+        }
+
+        .card {
+            border: 5px solid gray;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 10px;
+        }
+
+
+        a {
+
+            color: black;
+        }
+
+        h4 {
+            color: white;
+        }
+    </style>
+    <style>
+  body {
+    background-color: #8a8585
+  }
+</style>
+
+
+
+    <div class="button-card">
+        <button>
+            <a href="/seats/general" style="color: black;">General</a><br>
+        </button>
+        </head>
+    </div>
+<body>
+
+<h1>VIP Computers</h1>
+<div class="computer-container">
+    <div class="computer-column">
+        {% for computer in computers %}
+        {% if computer.busy %}
+        <div class="card" style="background-color: red">
+            {% else %}
+            <div class="card" style="background-color: green">
+                {% endif %}
+                <a href="/seats/{{ computer.id }}"
+                   style="display: block; color:white; font-size: large; text-align: center;"> {{ computer.number}} </a>
+                <h4 style="display: block; font-size: large; text-align: center;"> {{computer.category}} </h4>
+
+                <div class="computer-busy">
+                    <h3>Busy: {{ computer.busy }}</h3>
+                </div>
+                Price: {{ computer.price }}
+                <div class="timer">
+                    <span id="minutes">{{ computer.busy_until.minute }}</span>:<span id="seconds">{{ computer.busy_until.second }}</span>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+</body>
+</html>

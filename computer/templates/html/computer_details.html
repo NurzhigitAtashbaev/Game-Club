@@ -1,0 +1,28 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for computer in computers %}
+        <tr>
+            <td>{{ computer.number }}</td>
+            <td>
+                {% if computer.busy %}
+                    Busy until {{ computer.busy_until }}
+                {% else %}
+                    Available
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
