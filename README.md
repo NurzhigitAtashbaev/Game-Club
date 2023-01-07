@@ -1,22 +1,26 @@
-Game-Club:
-Компьютерый клуб точнее это инструмент администратора 
+# Game-Club
 
-Администратор включает компьютер на оплаченное время. \
+Game-Club is a computer club management tool for administrators.
 
-Список компьютеров, зелеными отмечаны свободные компьютеры,
-занятые же компьютеры отмечены красным \
+## Features
 
-Страница general на этой странице находятся все компьютеры общего зала \
-Страница  vip на этой странице находятся все компьютеры vip зала 
+- The administrator can turn on computers for a specified amount of time
+- A list of computers is displayed, with available computers marked in green and occupied computers marked in red
+- Two pages are available: `general`, which displays all computers in the general area, and `vip`, which displays all computers in the VIP area
 
+## Installation
 
-Клонирование: \
-git remote add origin git@github.com:NurzhigitAtashbaev/Game-Club.git
+To clone the repository:
 
-Запуск: \
-Ubuntu: python3 -m venv venv \
-source venv/bin/activate 
+git clone git@github.com:NurzhigitAtashbaev/Game-Club.git
 
-python manage.py makemigrations \
-python manage.py migrate \
-python manage.py runserver
+To set up the project, follow these steps:
+
+1. Set up a virtual environment: `python3 -m venv venv`
+2. Activate the virtual environment: `source venv/bin/activate`
+3. Run database migrations: `python manage.py makemigrations` and `python manage.py migrate`
+4. Run the development server: `python manage.py runserver`
+
+## Usage
+
+To use the application, open your web browser and go to the URL specified in the terminal (e.g. `http://127.0.0.1:8000/`). You will be able to access the computer lists on the `general` and `vip` pages.
