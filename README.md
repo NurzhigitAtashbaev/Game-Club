@@ -1,26 +1,26 @@
 # Game-Club
 
-Game-Club is a computer club management tool for administrators.
+Game-Club это инструмент для управления компьютерным клубом, предназначенный для администраторов.
 
-## Features
+## Особенности
 
-- The administrator can turn on computers for a specified amount of time
-- A list of computers is displayed, with available computers marked in green and occupied computers marked in red
-- Two pages are available: `general`, which displays all computers in the general area, and `vip`, which displays all computers in the VIP area
+- Администратор может включать компьютеры на определенное время
+- Отображается список компьютеров, свободные компьютеры отмечены зеленым, а занятые - красным
+- Доступны две страницы: `general`, на которой отображаются все компьютеры общего зала, и `vip`, на которой отображаются все компьютеры в VIP-зале
 
-## Installation
+## Установка
 
-To clone the repository:
+Чтобы склонировать репозиторий:
 
 git clone git@github.com:NurzhigitAtashbaev/Game-Club.git
 
-To set up the project, follow these steps:
 
-1. Set up a virtual environment: `python3 -m venv venv`
-2. Activate the virtual environment: `source venv/bin/activate`
-3. Run database migrations: `python manage.py makemigrations` and `python manage.py migrate`
-4. Run the development server: `python manage.py runserver`
+Чтобы настроить проект, выполните следующие шаги:
 
-## Usage
+1. Создайте виртуальное окружение: `python3 -m venv venv`
+2. Активируйте виртуальное окружение: `source venv/bin/activate`
+Выполните миграции базы данных: `python manage.py makemigrations` и `python manage.py migrate`
+4. Запустите разработческий сервер: python manage.py runserver
 
-To use the application, open your web browser and go to the URL specified in the terminal (e.g. `http://127.0.0.1:8000/`). You will be able to access the computer lists on the `general` and `vip` pages.
+Использование
+Чтобы использовать приложение, откройте веб-браузер и перейдите по указанному в терминале URL (например, http://127.0.0.1:8000/). Вы сможете получить доступ к спискам компьютеров на страницах general и vip.
